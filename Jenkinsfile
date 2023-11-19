@@ -30,8 +30,8 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        // Deploy the Django project
-        // Add your deployment steps here
+        sh 'pip install -r requirements.txt'
+        sh 'sudo systemctl start meetings_planner'
       }
     }
   }
